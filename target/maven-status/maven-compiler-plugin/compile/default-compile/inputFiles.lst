@@ -1,0 +1,11 @@
+/Users/lav/Lav_Apps/Spring_Apps/spring-security-jwt-demo/src/main/java/com/gigatorb/jwt/config/SecurityConfiguration.java
+/Users/lav/Lav_Apps/Spring_Apps/spring-security-jwt-demo/src/main/java/com/gigatorb/jwt/service/CustomUserDetailsService.java
+/Users/lav/Lav_Apps/Spring_Apps/spring-security-jwt-demo/src/main/java/com/gigatorb/jwt/filter/JwtFilter.java
+/Users/lav/Lav_Apps/Spring_Apps/spring-security-jwt-demo/src/main/java/com/gigatorb/jwt/model/JwtRequest.java
+/Users/lav/Lav_Apps/Spring_Apps/spring-security-jwt-demo/src/main/java/com/gigatorb/jwt/SpringSecurityJwtDemoApplication.java
+/Users/lav/Lav_Apps/Spring_Apps/spring-security-jwt-demo/src/main/java/com/gigatorb/jwt/repository/UserRepository.java
+/Users/lav/Lav_Apps/Spring_Apps/spring-security-jwt-demo/src/main/java/com/gigatorb/jwt/util/CustomUserDetails.java
+/Users/lav/Lav_Apps/Spring_Apps/spring-security-jwt-demo/src/main/java/com/gigatorb/jwt/controller/HomeController.java
+/Users/lav/Lav_Apps/Spring_Apps/spring-security-jwt-demo/src/main/java/com/gigatorb/jwt/model/JwtResponse.java
+/Users/lav/Lav_Apps/Spring_Apps/spring-security-jwt-demo/src/main/java/com/gigatorb/jwt/util/JWTUtil.java
+/Users/lav/Lav_Apps/Spring_Apps/spring-security-jwt-demo/src/main/java/com/gigatorb/jwt/entity/User.java
