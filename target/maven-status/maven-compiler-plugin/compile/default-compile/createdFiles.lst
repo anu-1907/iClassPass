@@ -1,7 +1,7 @@
 com/gigatorb/jwt/model/JwtResponse.class
 com/gigatorb/jwt/util/CustomUserDetails.class
 com/gigatorb/jwt/filter/JwtFilter.class
-com/gigatorb/jwt/SpringSecurityJwtDemoApplication.class
+com/gigatorb/jwt/IClassPassApplication.class
 com/gigatorb/jwt/controller/HomeController.class
 com/gigatorb/jwt/service/CustomUserDetailsService.class
 com/gigatorb/jwt/entity/User.class
