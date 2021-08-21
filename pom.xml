@@ -22,11 +22,14 @@
 			<artifactId>spring-boot-starter-security</artifactId>
 		</dependency>
 		<dependency>
+<<<<<<< HEAD
 			<groupId>com.google.api-client</groupId>
 			<artifactId>google-api-client</artifactId>
 			<version>1.32.1</version>
 		</dependency>
 		<dependency>
+=======
+>>>>>>> 174258d294c2c787554ed0cfe8d7433712b038e3
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
@@ -69,6 +72,7 @@
 			<artifactId>spring-security-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+<<<<<<< HEAD
 		<dependency>
 			<groupId>net.minidev</groupId>
 			<artifactId>json-smart</artifactId>
@@ -79,6 +83,9 @@
             <version>5.3.9.RELEASE</version>
         </dependency>
     </dependencies>
+=======
+	</dependencies>
+>>>>>>> 174258d294c2c787554ed0cfe8d7433712b038e3
 
 	<build>
 		<plugins>

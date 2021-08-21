@@ -6,6 +6,7 @@
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
+<<<<<<< HEAD
     "bootstrap": "^5.1.0",
     "jwt-decode": "^3.1.2",
     "react": "^17.0.2",
@@ -13,6 +14,10 @@
     "react-facebook-login": "^4.1.1",
     "react-google-login": "^5.2.2",
     "react-router-dom": "^5.2.0",
+=======
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+>>>>>>> 174258d294c2c787554ed0cfe8d7433712b038e3
     "react-scripts": "4.0.3",
     "web-vitals": "^1.1.2"
   },

@@ -1,5 +1,6 @@
 package com.gigatorb.jwt.controller;
 
+<<<<<<< HEAD
 import com.google.api.client.googleapis.auth.oauth2.GoogleIdToken;
 import com.google.api.client.googleapis.auth.oauth2.GoogleIdToken.Payload;
 import com.google.api.client.googleapis.auth.oauth2.GoogleIdTokenVerifier;
@@ -48,6 +49,23 @@ import java.util.Map;
 @RestController
 @CrossOrigin(origins ="http://localhost:3000")
 
+=======
+import com.gigatorb.jwt.model.JwtRequest;
+import com.gigatorb.jwt.model.JwtResponse;
+import com.gigatorb.jwt.service.CustomUserDetailsService;
+import com.gigatorb.jwt.util.JWTUtil;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.BadCredentialsException;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+>>>>>>> 174258d294c2c787554ed0cfe8d7433712b038e3
 public class HomeController {
 
     @Autowired
@@ -55,6 +73,7 @@ public class HomeController {
 
     @Autowired
     private AuthenticationManager authenticationManager;
+<<<<<<< HEAD
     @Autowired
     private UserRepository userRepository;
 
@@ -62,6 +81,11 @@ public class HomeController {
     private CustomUserDetailsService customUserDetailsService;
     @Autowired
     public PasswordEncoder passwordEncoder;
+=======
+
+    @Autowired
+    private CustomUserDetailsService customUserDetailsService;
+>>>>>>> 174258d294c2c787554ed0cfe8d7433712b038e3
 
     @GetMapping("/home")
     public String home(){
@@ -73,6 +97,7 @@ public class HomeController {
         return "Welcome, This is admin page.";
     }
 
+<<<<<<< HEAD
     @PostMapping( "/")
     public JwtResponse googleApi(@RequestBody JSONObject idTokenString ) throws GeneralSecurityException, IOException {
         final String CLIENT_ID = "897936785153-9nvngsr3m32mbal4sm7h9m3fiotj7u7r.apps.googleusercontent.com";
@@ -174,12 +199,18 @@ public class HomeController {
     }
 
 
+=======
+>>>>>>> 174258d294c2c787554ed0cfe8d7433712b038e3
     @PostMapping("/authenticate")
     public JwtResponse authenticate(@RequestBody JwtRequest jwtRequest) throws Exception{
         try {
             authenticationManager.authenticate(
                     new UsernamePasswordAuthenticationToken(
+<<<<<<< HEAD
                             jwtRequest.getEmail(),
+=======
+                            jwtRequest.getUsername(),
+>>>>>>> 174258d294c2c787554ed0cfe8d7433712b038e3
                             jwtRequest.getPassword()
                     )
             );
@@ -188,6 +219,7 @@ public class HomeController {
         }
 
         final UserDetails userDetails = customUserDetailsService.loadUserByUsername(
+<<<<<<< HEAD
                 jwtRequest.getEmail());
         final String token = jwtUtil.generateToken(userDetails);
 
@@ -231,3 +263,11 @@ public class HomeController {
     }
 }
 
+=======
+                jwtRequest.getUsername());
+        final String token = jwtUtil.generateToken(userDetails);
+
+        return new JwtResponse(token);
+    }
+}
+>>>>>>> 174258d294c2c787554ed0cfe8d7433712b038e3
