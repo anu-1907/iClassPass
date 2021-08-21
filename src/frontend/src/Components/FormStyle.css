@@ -1,0 +1,23 @@
+.form-style{
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 50px;
+
+
+}
+.buttons{
+    margin-bottom: 15px;
+}
+
+
+#inputdefault {
+    margin-bottom:  15px;
+    width: 100%;
+}
+
+.heading{
+    text-align: center;
+    border-bottom-style: solid;
+    width: 300px;
+}
