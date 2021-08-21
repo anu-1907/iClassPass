@@ -8,7 +8,6 @@ const Dashboard=()=>{
     const history = useHistory();
 
     const [body,setBody]=useState('')
-    // const [token, setToken]=useState()
 
 
     const tokenString=sessionStorage.getItem('token')
