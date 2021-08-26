@@ -16,14 +16,12 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
-<<<<<<< HEAD
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
 import java.util.Arrays;
-=======
->>>>>>> 174258d294c2c787554ed0cfe8d7433712b038e3
+
 
 @Configuration
 @EnableWebSecurity
@@ -66,17 +64,15 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         http.csrf()
                 .disable()
                 .authorizeRequests()
-<<<<<<< HEAD
+
                 .antMatchers("/authenticate","/signup","/","/fbApi")
-=======
-                .antMatchers("/authenticate")
->>>>>>> 174258d294c2c787554ed0cfe8d7433712b038e3
+
                 .permitAll()
                 .anyRequest()
                 .authenticated()
                 .and()
                 .sessionManagement()
-<<<<<<< HEAD
+
                 .sessionCreationPolicy(SessionCreationPolicy.ALWAYS);
         http.cors().and();
 
@@ -86,7 +82,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Bean
     CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
-        configuration.setAllowedOrigins(Arrays.asList("http://localhost:3000"));
+        configuration.setAllowedOrigins(Arrays.asList("http://iclasspassbucket.s3-website.us-east-2.amazonaws.com"));
         configuration.setAllowedMethods(Arrays.asList("GET","POST"));
         configuration.setAllowCredentials(true);
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
@@ -94,11 +90,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
         source.registerCorsConfiguration("/**", configuration);
         return source;
-    }
-=======
-                .sessionCreationPolicy(SessionCreationPolicy.STATELESS);
 
-        http.addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class);
+
     }
->>>>>>> 174258d294c2c787554ed0cfe8d7433712b038e3
 }

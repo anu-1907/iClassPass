@@ -1,6 +1,5 @@
 package com.gigatorb.jwt.controller;
 
-<<<<<<< HEAD
 import com.google.api.client.googleapis.auth.oauth2.GoogleIdToken;
 import com.google.api.client.googleapis.auth.oauth2.GoogleIdToken.Payload;
 import com.google.api.client.googleapis.auth.oauth2.GoogleIdTokenVerifier;
@@ -46,10 +45,7 @@ import java.util.Collections;
 import java.util.Map;
 
 
-@RestController
-@CrossOrigin(origins ="http://localhost:3000")
 
-=======
 import com.gigatorb.jwt.model.JwtRequest;
 import com.gigatorb.jwt.model.JwtResponse;
 import com.gigatorb.jwt.service.CustomUserDetailsService;
@@ -65,7 +61,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
->>>>>>> 174258d294c2c787554ed0cfe8d7433712b038e3
+@CrossOrigin(origins = "http://iclasspassbucket.s3-website.us-east-2.amazonaws.com")
 public class HomeController {
 
     @Autowired
@@ -73,19 +69,15 @@ public class HomeController {
 
     @Autowired
     private AuthenticationManager authenticationManager;
-<<<<<<< HEAD
     @Autowired
     private UserRepository userRepository;
 
-    @Autowired
-    private CustomUserDetailsService customUserDetailsService;
+
     @Autowired
     public PasswordEncoder passwordEncoder;
-=======
 
     @Autowired
     private CustomUserDetailsService customUserDetailsService;
->>>>>>> 174258d294c2c787554ed0cfe8d7433712b038e3
 
     @GetMapping("/home")
     public String home(){
@@ -97,7 +89,6 @@ public class HomeController {
         return "Welcome, This is admin page.";
     }
 
-<<<<<<< HEAD
     @PostMapping( "/")
     public JwtResponse googleApi(@RequestBody JSONObject idTokenString ) throws GeneralSecurityException, IOException {
         final String CLIENT_ID = "897936785153-9nvngsr3m32mbal4sm7h9m3fiotj7u7r.apps.googleusercontent.com";
@@ -199,18 +190,15 @@ public class HomeController {
     }
 
 
-=======
->>>>>>> 174258d294c2c787554ed0cfe8d7433712b038e3
+
     @PostMapping("/authenticate")
     public JwtResponse authenticate(@RequestBody JwtRequest jwtRequest) throws Exception{
         try {
             authenticationManager.authenticate(
                     new UsernamePasswordAuthenticationToken(
-<<<<<<< HEAD
+
                             jwtRequest.getEmail(),
-=======
-                            jwtRequest.getUsername(),
->>>>>>> 174258d294c2c787554ed0cfe8d7433712b038e3
+
                             jwtRequest.getPassword()
                     )
             );
@@ -219,7 +207,6 @@ public class HomeController {
         }
 
         final UserDetails userDetails = customUserDetailsService.loadUserByUsername(
-<<<<<<< HEAD
                 jwtRequest.getEmail());
         final String token = jwtUtil.generateToken(userDetails);
 
@@ -252,7 +239,7 @@ public class HomeController {
         user.setPassword(encodedPass);
         customUserDetailsService.saveUser(user);
         final UserDetails userDetails = customUserDetailsService.loadUserByUsername(
-                name);
+                email);
         final String token = jwtUtil.generateToken(userDetails);
 
         return new JwtResponse(token);
@@ -263,11 +250,3 @@ public class HomeController {
     }
 }
 
-=======
-                jwtRequest.getUsername());
-        final String token = jwtUtil.generateToken(userDetails);
-
-        return new JwtResponse(token);
-    }
-}
->>>>>>> 174258d294c2c787554ed0cfe8d7433712b038e3

@@ -10,8 +10,10 @@ const NewGapi=()=>{
     const history = useHistory();
 
     const handleLogin = async googleData => {
+        console.log(googleData)
+
   
-        const res = await fetch("http://localhost:8080/", {
+        const res = await fetch("http://iclasspassjava8.us-east-2.elasticbeanstalk.com/", {
             method: "POST",
             body: JSON.stringify({
             token: googleData.tokenId
@@ -22,6 +24,7 @@ const NewGapi=()=>{
         })
 
         const data = await res.json();
+        console.log(data)
         sessionStorage.setItem('token', JSON.stringify(data));
         if(data.jwtToken!=null){
             history.push('./')
