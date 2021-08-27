@@ -65,7 +65,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .disable()
                 .authorizeRequests()
 
-                .antMatchers("/authenticate","/signup","/gapi","/fbApi")
+                .antMatchers("/authenticate","/signup","/gapi","/fbApi","/")
 
                 .permitAll()
                 .anyRequest()
