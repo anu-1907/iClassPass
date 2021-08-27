@@ -10,7 +10,7 @@ const FbApi=()=>{
 
     const handleLogin = async FbApi => {
   
-        const res = await fetch("http://iclasspassjava8.us-east-2.elasticbeanstalk.com/fbApi", {
+        const res = await fetch("http://iclasspasspipeline.us-east-2.elasticbeanstalk.com/fbApi", {
             method: "POST",
             body: JSON.stringify({
             token: FbApi

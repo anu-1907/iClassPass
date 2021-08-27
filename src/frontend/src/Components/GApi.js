@@ -13,7 +13,7 @@ const NewGapi=()=>{
         console.log(googleData)
 
   
-        const res = await fetch("http://iclasspassjava8.us-east-2.elasticbeanstalk.com/", {
+        const res = await fetch("http://iclasspasspipeline.us-east-2.elasticbeanstalk.com/", {
             method: "POST",
             body: JSON.stringify({
             token: googleData.tokenId

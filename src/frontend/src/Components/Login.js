@@ -26,7 +26,7 @@ const Login=()=>{
 
     const saveUser = async(event)=>{
         event.preventDefault();
-       const res=  await fetch("http://iclasspassjava8.us-east-2.elasticbeanstalk.com/authenticate",{
+       const res=  await fetch("http://iclasspasspipeline.us-east-2.elasticbeanstalk.com/authenticate",{
             headers: {
                 'Accept': "application/json, text/plain, */*",
                 'Content-Type': "application/json;charset=utf-8"
