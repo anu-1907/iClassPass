@@ -90,7 +90,12 @@ public class HomeController {
         return "Welcome, This is admin page.";
     }
 
-    @PostMapping( "/")
+    @GetMapping("/")
+    ResponseEntity<String> hello() {
+        return new ResponseEntity<>("Hello World!", HttpStatus.OK);
+    }
+
+    @PostMapping( "/gapi")
     public JwtResponse googleApi(@RequestBody JSONObject idTokenString ) throws GeneralSecurityException, IOException {
         final String CLIENT_ID = "897936785153-9nvngsr3m32mbal4sm7h9m3fiotj7u7r.apps.googleusercontent.com";
 

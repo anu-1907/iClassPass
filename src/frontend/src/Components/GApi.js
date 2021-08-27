@@ -13,7 +13,7 @@ const NewGapi=()=>{
         console.log(googleData)
 
   
-        const res = await fetch("http://localhost:5000/", {
+        const res = await fetch("http://localhost:5000/gapi", {
             method: "POST",
             body: JSON.stringify({
             token: googleData.tokenId
