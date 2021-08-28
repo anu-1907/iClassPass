@@ -61,8 +61,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@CrossOrigin
-//        (origins = "http://iclasspassbucket.s3-website.us-east-2.amazonaws.com")
+@CrossOrigin(origins ="https://main.d34ovky5vt24b7.amplifyapp.com/")
 public class HomeController {
 
     @Autowired

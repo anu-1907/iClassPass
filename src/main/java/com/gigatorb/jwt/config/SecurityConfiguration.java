@@ -65,7 +65,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .disable()
                 .authorizeRequests()
 
-                .antMatchers("/authenticate","/signup","/gapi","/fbApi","/")
+                .antMatchers("/authenticate","/signup","/gapi","/fbApi")
 
                 .permitAll()
                 .anyRequest()
@@ -82,7 +82,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Bean
     CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
-//        configuration.setAllowedOrigins(Arrays.asList("http://iclasspassbucket.s3-website.us-east-2.amazonaws.com"));
+        configuration.setAllowedOrigins(Arrays.asList("https://main.d34ovky5vt24b7.amplifyapp.com/"));
         configuration.setAllowedMethods(Arrays.asList("GET","POST"));
         configuration.setAllowCredentials(true);
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();

@@ -66,10 +66,7 @@
 			</exclusions>
 		</dependency>
 
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-thymeleaf</artifactId>
-		</dependency>
+
 
 		<dependency>
 			<groupId>org.springframework.security</groupId>
@@ -101,27 +98,8 @@
 					</excludes>
 				</configuration>
 			</plugin>
-		<plugin>
-			<artifactId>maven-resources-plugin</artifactId>
-			<executions>
-				<execution>
-					<id>position-react-build</id>
-					<goals>
-						<goal>copy-resources</goal>
-					</goals>
-					<phase>prepare-package</phase>
-					<configuration>
-						<outputDirectory>${project.build.outputDirectory}/static</outputDirectory>
-						<resources>
-							<resource>
-								<directory>C:/GigatorbApps/iClassPass-main/src/frontend/build</directory>
-								<filtering>false</filtering>
-							</resource>
-						</resources>
-					</configuration>
-				</execution>
-			</executions>
-		</plugin>
+
+
 		</plugins>
 
 	</build>
